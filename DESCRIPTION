@@ -1,10 +1,10 @@
 Package: rlexer
-Title: What the Package Does (One Line, Title Case)
+Title: Lexer/Scanner for LOX language
 Version: 0.0.0.9000
 Authors@R: 
     person("gitrdm", , , "49376741+gitrdm@users.noreply.github.com", role = c("aut", "cre"),
            comment = c(ORCID = "XXXX"))
-Description: What the package does (one paragraph).
+Description: A R based lexer for the LOX language, which is used in the book "Crafting Interpreters" by Bob Nystrom. The lexer is based on the one implemented in the book, but adapted to R. The lexer is used to tokenize the input string into a list of tokens, which can be used by a parser to build an abstract syntax tree (AST).
 License: MIT + file LICENSE
 Suggests: 
     testthat (>= 3.0.0)
@@ -12,5 +12,5 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
-URL: https://github.com/gitrdm/rlexer
+URL: https://github.com/gitrdm/rlexer, https://gitrdm.github.io/rlexer/
 BugReports: https://github.com/gitrdm/rlexer/issues

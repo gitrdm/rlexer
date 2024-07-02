@@ -13,21 +13,21 @@ knitr::opts_chunk$set(
 )
 ```
 
+**NOTE: This is a work in progress and should not be used in production. It only serves as a means to learn R, R Packaging, github usage and programming concepts. There is no real worth to the code here beyond this.**
 # rlexer
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/rlexer)](https://CRAN.R-project.org/package=rlexer)
 <!-- badges: end -->
 
-The goal of rlexer is to ...
+The goal of rlexer is to be a lexer for the programmaing language LOX as described in the book Crafting Interpreters by Bob Nystrom. This is a work in progress and should not be used in production. It only serves as a means to learn R, R Packaging, github usage and programming concepts. There is no real worth to the code here beyond this.
 
 ## Installation
 
-You can install the development version of rlexer like so:
+You can install the development version of rlexer from [GitHub](https://github.com/) with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+devtools::install_github("gitrdm/rlexer")
 ```
 
 ## Example
