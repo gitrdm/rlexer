@@ -4,7 +4,9 @@
 **NOTE: This is a work in progress and should not be used in production.
 It only serves as a means to learn R, R Packaging, github usage and
 programming concepts. There is no real worth to the code here beyond
-this.** \# rlexer
+this.**
+
+# rlexer
 
 <!-- badges: start -->
 <!-- badges: end -->
