@@ -2,8 +2,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 **NOTE: This is a work in progress and should not be used in production.
-It only serves as a means to learn R, R Packaging, github usage and
-programming concepts. There is no real worth to the code here beyond
+It only serves as a means for me to learn R, R Packaging, github usage
+and programming concepts. There is no real worth to the code here beyond
 this.**
 
 # rlexer
@@ -14,8 +14,8 @@ this.**
 The goal of rlexer is to be a lexer for the programmaing language LOX as
 described in the book Crafting Interpreters by Bob Nystrom. This is a
 work in progress and should not be used in production. It only serves as
-a means to learn R, R Packaging, github usage and programming concepts.
-There is no real worth to the code here beyond this.
+a means for me to learn R, R Packaging, github usage and programming
+concepts. There is no real worth to the code here beyond this.
 
 ## Installation
 
