@@ -13,14 +13,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-**NOTE: This is a work in progress and should not be used in production. It only serves as a means for me to learn R, R Packaging, github usage and programming concepts. There is no real worth to the code here beyond this.**
+**NOTE: This project  only serves as a means for me to learn R, R Packaging, github usage and programming concepts. There is no real worth to the code here beyond this.**
 
 # rlexer
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rlexer is to be a lexer for the programmaing language LOX as described in the book Crafting Interpreters by Bob Nystrom. This is a work in progress and should not be used in production. It only serves as a means for me to learn R, R Packaging, github usage and programming concepts. There is no real worth to the code here beyond this.
+The goal of rlexer is to be a lexer for the programming language LOX as described in the book Crafting Interpreters by Bob Nystrom. 
+
+The scanner is complete and passes all of the tests in the book. The next step is to implement the parser and interpreter.
 
 ## Installation
 
@@ -33,25 +35,16 @@ devtools::install_github("gitrdm/rlexer")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to the scanner is called:
 
 ```{r example}
 library(rlexer)
 ## basic example code
+input <- "andy _ _123 _abc ab123 abc_"
+scanner <- Scanner$new(input)
+tokens <- scanner$scanTokens() 
+print(tokens)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Code of Conduct
 
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.

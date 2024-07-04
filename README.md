@@ -1,21 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-**NOTE: This is a work in progress and should not be used in production.
-It only serves as a means for me to learn R, R Packaging, github usage
-and programming concepts. There is no real worth to the code here beyond
-this.**
+**NOTE: This project only serves as a means for me to learn R, R
+Packaging, github usage and programming concepts. There is no real worth
+to the code here beyond this.**
 
 # rlexer
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rlexer is to be a lexer for the programmaing language LOX as
-described in the book Crafting Interpreters by Bob Nystrom. This is a
-work in progress and should not be used in production. It only serves as
-a means for me to learn R, R Packaging, github usage and programming
-concepts. There is no real worth to the code here beyond this.
+The goal of rlexer is to be a lexer for the programming language LOX as
+described in the book Crafting Interpreters by Bob Nystrom.
+
+The scanner is complete and passes all of the tests in the book. The
+next step is to implement the parser and interpreter.
 
 ## Installation
 
@@ -29,33 +28,111 @@ devtools::install_github("gitrdm/rlexer")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to the scanner is called:
 
 ``` r
 library(rlexer)
 ## basic example code
+input <- "andy _ _123 _abc ab123 abc_"
+scanner <- Scanner$new(input)
+tokens <- scanner$scanTokens() 
+print(tokens)
+#> [[1]]
+#> [[1]]$type
+#> [1] "IDENTIFIER"
+#> 
+#> [[1]]$lexeme
+#> [1] "andy"
+#> 
+#> [[1]]$literal
+#> NULL
+#> 
+#> [[1]]$line
+#> [1] 1
+#> 
+#> 
+#> [[2]]
+#> [[2]]$type
+#> [1] "IDENTIFIER"
+#> 
+#> [[2]]$lexeme
+#> [1] "_"
+#> 
+#> [[2]]$literal
+#> NULL
+#> 
+#> [[2]]$line
+#> [1] 1
+#> 
+#> 
+#> [[3]]
+#> [[3]]$type
+#> [1] "IDENTIFIER"
+#> 
+#> [[3]]$lexeme
+#> [1] "_123"
+#> 
+#> [[3]]$literal
+#> NULL
+#> 
+#> [[3]]$line
+#> [1] 1
+#> 
+#> 
+#> [[4]]
+#> [[4]]$type
+#> [1] "IDENTIFIER"
+#> 
+#> [[4]]$lexeme
+#> [1] "_abc"
+#> 
+#> [[4]]$literal
+#> NULL
+#> 
+#> [[4]]$line
+#> [1] 1
+#> 
+#> 
+#> [[5]]
+#> [[5]]$type
+#> [1] "IDENTIFIER"
+#> 
+#> [[5]]$lexeme
+#> [1] "ab123"
+#> 
+#> [[5]]$literal
+#> NULL
+#> 
+#> [[5]]$line
+#> [1] 1
+#> 
+#> 
+#> [[6]]
+#> [[6]]$type
+#> [1] "IDENTIFIER"
+#> 
+#> [[6]]$lexeme
+#> [1] "abc_"
+#> 
+#> [[6]]$literal
+#> NULL
+#> 
+#> [[6]]$line
+#> [1] 1
+#> 
+#> 
+#> [[7]]
+#> [[7]]$type
+#> [1] "EOF"
+#> 
+#> [[7]]$lexeme
+#> NULL
+#> 
+#> [[7]]$literal
+#> NULL
+#> 
+#> [[7]]$line
+#> [1] 1
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## Code of Conduct
