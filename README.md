@@ -28,7 +28,7 @@ devtools::install_github("gitrdm/rlexer")
 
 ## Example
 
-This is a basic example which shows you how to the scanner is called:
+This is a basic example which shows you how the scanner is called:
 
 ``` r
 library(rlexer)
